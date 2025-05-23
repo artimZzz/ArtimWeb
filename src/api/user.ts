@@ -12,10 +12,10 @@ export const API_GET_USER: UseSuspenseQueryOptions<User[]> = {
 
     const responseJson = await response.json()
 
-    responseJson.map(UserSchema.parse)
+    const parsedData = responseJson.map(UserSchema.parse)
 
-    return responseJson
+    return parsedData
   },
-  staleTime: 1000 * 60, // 1 mintue
-  gcTime: 1000 * 60 * 5 // 5 mintues
+  staleTime: 1000 * 60, // 1 minute
+  gcTime: 1000 * 60 * 5 // 5 minutes
 }
