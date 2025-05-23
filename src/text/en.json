@@ -1,0 +1,20 @@
+{
+  "common": {
+    "loading": "Loading..."
+  },
+  "home": {
+    "read_doc": "Read our docs",
+    "deploy_now": "Deploy now",
+    "get_started": "Get started by editing",
+    "code": "src/app/page.tsx",
+    "save_to_see": "Save and see your changes instantly.",
+    "show_popup": "Show popup",
+    "learn": "Learn",
+    "examples": "Examples",
+    "go_to": "Go to nextjs.org →",
+    "user_list": "User List"
+  },
+  "popup": {
+    "hello_world": "Hello World"
+  }
+}

@@ -6,11 +6,28 @@
   "linter": {
     "enabled": true,
     "rules": {
-      "recommended": true
+      "recommended": true,
+      "correctness": {
+        "noUnusedImports": "error"
+      },
+      "suspicious": {
+        "noDebugger": "warn"
+      }
     }
   },
   "formatter": {
-    "enabled": true,
     "useEditorconfig": true
+  },
+  "javascript": {
+    "formatter": {
+      "semicolons": "asNeeded",
+      "quoteStyle": "single",
+      "trailingCommas": "none"
+    }
+  },
+  "json": {
+    "formatter": {
+      "enabled": true
+    }
   }
 }

@@ -3,5 +3,12 @@
   "editor.formatOnSave": true,
   "editor.codeActionsOnSave": {
     "source.fixAll.biome": "explicit"
+  },
+  "typescript.preferences.importModuleSpecifier": "non-relative",
+  "files.associations": {
+    "env.development": "env"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "biomejs.biome"
   }
 }
