@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import { Geist, Geist_Mono } from 'next/font/google'
 import '@/app/globals.css'
-import MessagePopup from '@/component/MessagePopup'
+import MessagePopup from '@/component/MessagePopup.client'
 import I18NProvider from '@/provider/I18NProvider'
 import ReactQueryProvider from '@/provider/ReactQueryProvider'
 

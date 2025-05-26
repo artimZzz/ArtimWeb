@@ -1,3 +1,5 @@
+'use client'
+
 import { API_GET_USER } from '@/api/user'
 import Skeleton from '@/component/Skeleton'
 import type { User } from '@/type/user'

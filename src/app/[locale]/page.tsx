@@ -1,18 +1,12 @@
-'use client'
-
-import useMessageStore from '@/store/messageStore'
+'use server'
 import Image from 'next/image'
-import { useTranslations } from 'next-intl'
-import UserSection from '@/component/UserSection'
+import { getTranslations } from 'next-intl/server'
+import UserSection from '@/component/UserSection.client'
+import FirstUserSection from '@/component/FirstUserSection.server'
+import OpenMessageButton from '@/component/OpenMessageButton.client'
 
-export default function Home() {
-  const t = useTranslations()
-
-  const { setMessage } = useMessageStore()
-
-  const handleClick = () => {
-    setMessage(t('popup.hello_world'))
-  }
+export default async function Home() {
+  const t = await getTranslations()
 
   return (
     <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
@@ -60,14 +54,9 @@ export default function Home() {
           >
             {t('home.read_doc')}
           </a>
-          <button
-            className="cursor-pointer rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            type="button"
-            onClick={handleClick}
-          >
-            {t('home.show_popup')}
-          </button>
+          <OpenMessageButton />
         </div>
+        <FirstUserSection />
         <UserSection />
       </main>
       <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
