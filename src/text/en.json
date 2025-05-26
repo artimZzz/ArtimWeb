@@ -3,6 +3,7 @@
     "loading": "Loading..."
   },
   "home": {
+    "first_user": "First User",
     "read_doc": "Read our docs",
     "deploy_now": "Deploy now",
     "get_started": "Get started by editing",
